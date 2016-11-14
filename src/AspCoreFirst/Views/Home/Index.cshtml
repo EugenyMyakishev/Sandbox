@@ -1,0 +1,45 @@
+﻿@model AspCoreFirst.Models.EntityHelpers.UserLoginHelper
+<h2>@ViewData["Say"]</h2>
+<h3>@ViewData["str"]</h3>
+<h4>@Localizer["Hello"]</h4>
+<form asp-action="SignUp" asp-controller="Home">
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" asp-format="email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password"/>
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <label asp-for="ConfirmPassword"></label>
+        <input asp-for="ConfirmPassword" type="password"/>
+        <span asp-validation-for="ConfirmPassword"></span>
+    </div>
+    <div>
+        <input type="submit" value="Отправить" />
+    </div>
+</form>
+<form asp-action="Login" asp-controller="Home">
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" asp-format="email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <label asp-for="ConfirmPassword"></label>
+        <input asp-for="ConfirmPassword" type="password" />
+        <span asp-validation-for="ConfirmPassword"></span>
+    </div>
+    <div>
+        <input type="submit" value="Отправить" />
+    </div>
+    <a href="@Url.Action("Res","Home")">Ссылка</a>
+</form>

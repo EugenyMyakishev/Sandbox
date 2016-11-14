@@ -1,0 +1,5 @@
+﻿{
+  "name": "Eugeny",
+  "lastname": "Myakishev",
+  "ConnectionStrings": { "DefaultConnection": "Data Source=.\\SQLEXPRESS;Initial Catalog=mobilestoredb;Integrated Security = true" }
+}
